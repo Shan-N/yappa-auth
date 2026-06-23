@@ -1,0 +1,9 @@
+# .gitignore for yappa-auth
+node_modules/
+.env
+.env.local
+.env.*.local
+dist/
+*.log
+npm-debug.log*
+.DS_Store
