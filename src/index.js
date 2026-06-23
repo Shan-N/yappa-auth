@@ -46,7 +46,7 @@ const loginSchema = z.object({
 
 function generateAccessToken(tenantId, userId) {
   return jwt.sign(
-    { tenant_id: tenantId, user_id: userId, iss: JWT_ISSUER, aud: JWT_AUDIENCE },
+    { tenant_id: tenantId, user_id: userId },
     JWT_SECRET,
     { expiresIn: ACCESS_TOKEN_TTL, issuer: JWT_ISSUER, audience: JWT_AUDIENCE }
   );
